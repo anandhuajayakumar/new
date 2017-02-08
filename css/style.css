@@ -60,7 +60,12 @@ h1, h2, h3, h4, h5, h6{
 .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
-
+#portfolio{
+	background-image:url('../img/bg-banner02.jpg');
+}
+#portfolio .container{
+	background-color:#fff;
+}
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
@@ -128,7 +133,7 @@ HEADER
 
 .logo-dec
 {
-    color: #be9e21;
+    color: #4771d1;
 }
 .navbar-default .navbar-brand {
     color: #fff;
