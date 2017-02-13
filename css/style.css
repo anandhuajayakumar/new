@@ -100,11 +100,41 @@ h1, h2, h3, h4, h5, h6{
 HEADER 
 ************************************
 ***********************************/
-.header{
-    background: url('../img/plane.jpg') no-repeat fixed;
-    background-size: cover;
-    min-height: 650px;
-    position: relative;
+@media (min-width: 858px)
+{
+	.header{
+		background: url('../img/plane.jpg') no-repeat fixed;
+		 background-size: cover;
+		min-height: 650px;
+		position: relative;
+	}
+}
+@media (max-width: 857px) and (min-width: 570px)
+{
+	.header{
+		background: url('../img/shipm.jpg') no-repeat fixed;
+		 background-size: cover;
+		min-height: 650px;
+		position: relative;
+	}
+}
+@media(max-width: 569px) and (min-width: 400px)
+{
+	.header{
+		background: url('../img/ships.jpg') no-repeat fixed;
+		background-size: cover;
+		min-height: 650px;
+		position: relative;
+	}
+}
+@media(max-width:399px)
+{
+	.header{
+		background: url('../img/shipss.jpg') no-repeat fixed;
+		background-size: cover;
+		min-height: 650px;
+		position: relative;
+	}
 }
 .bg-color
 {
