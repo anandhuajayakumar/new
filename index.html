@@ -227,6 +227,14 @@
 					</div>
 				</div>
 			</section>
+			<section class="section-padding wow fadeInUp delay-05s">
+				<div class="container">
+					<div class="row">
+						<div id="map">
+						</div>
+					</div>
+				</div>
+			</section>
 			<footer id="footer">
 				<div class="container">
 					<div class="row text-center">
@@ -241,6 +249,7 @@
 		<script type="text/javascript" language="JavaScript">
 			$.noConflict();
 			jQuery(document).ready(function(){
+				jQuery("#map").css("height",window.innerHeight);
 				var v1=jQuery("#comp1").css("height");
 				var v2=jQuery("#comp2").css("height");
 				var v3=jQuery("#comp3").css("height");
@@ -283,6 +292,24 @@
 				});
 			});
 		</script>
+		<script>
+			function myMap() {
+				var mapCanvas = document.getElementById("map");
+				var myCenter = new google.maps.LatLng(33.875900,-118.034982); 
+				var mapOptions = {center: myCenter, zoom:15 };
+				var map = new google.maps.Map(mapCanvas,mapOptions);
+				var marker = new google.maps.Marker({
+					position: myCenter,
+					animation: google.maps.Animation.BOUNCE
+				});
+				marker.setMap(map);
+				var infowindow = new google.maps.InfoWindow({
+					content: "17109 Edwards Rd, Cerritos, California 90703, United States"
+				});
+				infowindow.open(map,marker);
+			}
+		</script>
+		<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 		<script src="js/app.js"></script>
 		<script src="js/jquery.easing.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
