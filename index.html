@@ -16,7 +16,16 @@
 		<script src="js/jquery-2.1.0.min.js"></script>
 	</head>
 	<body>
-		<div id="loader"></div>
+		<div class="spinner-wrapper">
+			<div class="spinner">
+				<div class="sk-folding-cube">
+					<div class="sk-cube1 sk-cube"></div>
+					<div class="sk-cube2 sk-cube"></div>
+					<div class="sk-cube4 sk-cube"></div>
+					<div class="sk-cube3 sk-cube"></div>
+				</div>
+			</div>
+		</div>
 		<div id="myDiv">
 			<div class="header">
 				<div class="bg-color">
@@ -289,6 +298,19 @@
 						jQuery("#comp2").css("height",v2*1.5);
 						jQuery("#comp3").css("height",v3*1.5);
 					}
+				});
+			});
+		</script>
+		<script>
+			$(document).ready(function() {
+				//Preloader
+				$(window).load(function() {
+					preloaderFadeOutTime = 500;
+					function hidePreloader() {
+						var preloader = $('.spinner-wrapper');
+						preloader.fadeOut(preloaderFadeOutTime);
+					}
+					hidePreloader();
 				});
 			});
 		</script>
